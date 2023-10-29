@@ -1,0 +1,31 @@
+<head>
+  <title>{{title}}</title>
+</head>
+
+<body [ngClass]="isDark ? 'dark-theme' : 'light-theme' ">
+  
+<!-- Botão para abrir o menu -->
+    <span id="menuButton" (click)="openNav()">&#9776;</span>
+
+    <!-- Conteúdo principal -->
+    <div  id="main" [ngStyle]="mainStyle">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Menu lateral -->
+    <div id="mySidenav" class="sidenav" [ngStyle]="sidenavStyle">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&#9776;</a>
+      <h2>Garagem Estrelar</h2>
+      <a [routerLink]="'/'"># Garagem</a>
+      <a [routerLink]="'entrada'"># Nova Entrada</a>
+      <a href="#"># Link 3</a>
+      <a href="#"># Relatórios</a>
+      <a href="#"># Sair do Sistema</a>
+      <button id="themeButton" (click)="toggleTheme()">{{btnMode}}</button>
+    </div>
+
+    <div id="footer">
+      &copy; 2023 Seu Nome. Todos os direitos reservados.
+      <div id="clock" class="oCLock">{{clock}}</div>
+    </div>
+</body>

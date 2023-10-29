@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Lateral Responsivo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css" >
+    <!-- <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            width: 250px;
+            z-index: 999;
+            background: #7386D5;
+            color: #fff;
+            transition: all 0.3s;
+        }
+        
+        #sidebar.active {
+            left: 0;
+        }
+        
+        #sidebar .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #6d7fcc;
+        }
+        
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+        
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+        
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+        
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+        
+        #sidebar ul li.active > a, a[aria-expanded="true"] {
+            color: #fff;
+            background: #6d7fcc;
+        }
+        
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+        
+        #sidebarCollapse {
+            background: #7386D5;
+            color: #fff;
+            border: none;
+        }
+        
+        #sidebarCollapse:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .block {
+            padding: 20px;
+            margin: 10px;
+            color: #fff;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        @media (max-width: 768px) {
+            #sidebar {
+                left: -250px;
+            }
+            
+            #sidebar.active {
+                left: 0;
+            }
+            
+            .content {
+                margin-left: 250px;
+            }
+        }
+        
+        .close-btn {
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        .close-btn:hover {
+            color: #fff;
+            background: #6d7fcc;
+        }
+        
+        .active {
+            margin-left: 250px;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu Lateral Responsivo</h3>
+                <button type="button" class="close-btn">×</button>
+            </div>
+            <ul class="list-unstyled components">
+                <p>Menu</p>
+                <li>
+                    <a href="#">Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Item 3</a>
+                </li>
+                <li>
+                    <a href="#">Item 4</a>
+                </li>
+                <li>
+                    <a href="#">Item 5</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+         <div class="block"></div>
+     </div>
+ </div>
+    </div>
+    <button type="button" id="sidebarCollapse">&#9776; Menu</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('.content').toggleClass('active');
+            });
+            $('.close-btn').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.content').removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

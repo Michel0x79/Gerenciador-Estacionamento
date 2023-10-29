@@ -1,0 +1,54 @@
+.rectangles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rectangle {
+    background-image: url(../../img/carro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: calc(20% - 30px);
+    min-width: 220px;
+    margin: 10px;
+    height: 400px;
+    /* background-color: #4CAF50; Verde */
+    position: relative;
+    /* cursor: auto; */
+    transition: 1s;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+.rectangle:hover {
+    /* transform: translateY(-50px); Efeito de subir */
+}
+
+.info-box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro transparente */
+    color: white;
+    padding: 10px;
+    width: 80%;
+    height: 95%;
+    bottom: -50%;
+    /* Iniciar escondido */
+    left: 0;
+    transition: 0.5s;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.info-box button {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+
+.rectangle:hover .info-box {
+    bottom: 0;
+    /* Mostrar quando o mouse passar por cima */
+    position: relative;
+    opacity: 1;
+}
