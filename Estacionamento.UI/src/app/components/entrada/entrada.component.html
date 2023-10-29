@@ -1,1 +1,31 @@
-<p>entrada works!</p>
+
+
+<div class="container">
+<form [formGroup]="carroForm" (ngSubmit)="onSubmit()" class="mt-4">
+    <div class="form-group">
+      <label for="Marca">Marca:</label>
+      <input type="text" id="Marca" formControlName="Marca" required="" >
+    </div>
+    <div class="form-group">
+      <label for="Modelo">Modelo:</label>
+      <input type="text" id="Modelo" formControlName="Modelo" required="">
+    </div>
+    <div class="form-group">
+      <label for="Placa">Placa:</label>
+      <input type="text" id="Placa" formControlName="Placa" required="">
+    </div>
+    <div class="form-group">
+      <label for="HoraEntrada">Hora de Entrada:</label>
+      <input type="datetime-local" id="HoraEntrada" formControlName="HoraEntrada" required="">
+    </div>
+    <!--<div>
+      <label for="horaSaida">Hora de Saída:</label>
+      <input type="datetime-local" id="horaSaida" formControlName="horaSaida">
+    </div> -->
+    <!-- <div>
+      <label for="valorPago">Valor Pago:</label>
+      <input type="number" id="valorPago" formControlName="valorPago">
+    </div> -->
+    <button type="submit">Enviar</button>
+  </form>
+</div>
