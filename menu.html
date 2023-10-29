@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Botão para abrir o menu -->
+    <span id="menuButton" onclick="openNav()">&#9776;</span>
+
+    <!-- Conteúdo principal -->
+    <div id="main">
+      <div class="rectangles">
+        <!-- Adicione 10 retângulos verdes -->
+        <div class="rectangle">
+          <div class="info-box">
+            <p>Marca: Chevrolet</p>
+            <p>Modelo: Onix</p>
+            <p>Placa: ABC-1234</p>
+            <p>Hora de entrada: 10:00</p>
+            <p>Hora de saída: 15:30</p>
+            <p>Valor pago: R$ 20,00</p>
+            <button href="#"># Registrar Saída</button>
+          </div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+        <div class="rectangle">
+          <div class="info-box">Informações adicionais aqui.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu lateral -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&#9776;</a
+      >
+      <h2>Garagem Estrelar</h2>
+      <a href="#"># Garagem</a>
+      <a href="#"># Nova Entrada</a>
+      <a href="#"># Link 3</a>
+      <a href="#"># Relatórios</a>
+      <a href="#"># Sair do Sistema</a>
+      <button id="themeButton" onclick="toggleTheme()">Modo Escuro</button>
+    </div>
+
+    <div id="footer">
+      &copy; 2023 Seu Nome. Todos os direitos reservados.
+      <div id="clock" class="oCLock"></div>
+    </div>
+    <!-- JavaScript para abrir e fechar o menu -->
+    <script type="text/javascript" src="funcoes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Lateral</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #aabe79;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        justify-content: center;
+         align-items: center;
+      }
+      .content {
+        flex: 1;
+        background-color: #aabe79;
+        padding: 20px;
+      }
+      .row{
+         display: flex;
+         position: relative;
+         
+      }
+
+      .menu {
+        background-color: #333;
+        color: #fff;
+        width: 200px;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        z-index: 1;
+        border-top-right-radius: 10px;
+        border-end-end-radius: 10px;
+        border-right: 1px solid rgb(52, 143, 24);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        margin-top: 15px;
+      }
+
+      .menu ul li:hover {
+        background-color: #91c098;
+      }
+
+      ul a {
+         text-decoration: none;
+         font-size: 18px;
+         font-family: consolas;
+         color: darkcyan;
+      }
+      .ulMenu li{
+         font-weight: bolder;
+         
+      }
+      .menu .toggle {
+        position: absolute;
+        top: 10px;
+        right: -40px;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+      }
+
+      .menu .toggle:hover {
+        background-color: #444;
+      }
+
+      .menu .toggle span {
+        font-size: 24px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .menu .toggle.active span {
+        transform: rotate(270deg);
+      }
+
+
+      @media (max-width: 768px) {
+        .menu {
+          position: absolute;
+          left: -200px;
+          transition: all 0.3s ease-in-out;
+        }
+        .box {
+          width: calc(100% - 20px);
+        }
+        .menu.active {
+          left: 0;
+        }
+
+        .content {
+          padding: 20px 20px 20px 220px;
+        }
+      }
+      .box-green {
+         background-color: green;
+         /* position: relative; */
+         height: 400px;
+         width: 250px;
+         margin: 40px;
+         transition: background-color 0.5s ease;
+         border: 2px solid;
+         border-radius: 5px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: all 0.3s ease-in-out;
+      }
+
+      .box-green:hover {
+        background-color: lightgreen;
+        border-color: aquamarine;
+        /* transform: scale(1.1); */
+      }
+      .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-gree:hover .info {
+  opacity: 1;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu active">
+        <div class="toggle">
+          <span>&#9776;</span>
+        </div>
+        <ul class="ulMenu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="content">
+         <div class="row">
+            <div class="box-green">
+               <div class="info">
+                  asdasdasdasd
+               </div>
+            </div>
+            <div class="box-green">
+               <div class="info">
+                  asdasdasdasd
+               </div>
+            </div>
+            <div class="box-green">
+               <div class="info">
+                  asdasdasdasd
+               </div>
+            </div>
+            <div class="box-green">
+               <div class="info">
+                  asdasdasdasd
+               </div>
+            </div>
+            <div class="box-green">
+               <div class="info">
+                  asdasdasdasd
+               </div>
+            </div><br>
+         </div>
+         <div class="row">
+            <div class="box-green"></div>
+            <div class="box-green"></div>
+            <div class="box-green"></div>
+            <div class="box-green"></div>
+            <div class="box-green"></div><br>
+         </div>
+        </div>
+    </div>
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const menu = document.querySelector(".menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        toggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
