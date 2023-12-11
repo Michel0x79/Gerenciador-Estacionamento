@@ -1,41 +1,16 @@
-<div class="rectangles">
+<div class="rectangles" >
     <!-- Adicione 10 retângulos verdes -->
-    <div class="rectangle">
-      <div class="info-box">
-        <p>Marca: Chevrolet</p>
-        <p>Modelo: Onix</p>
-        <p>Placa: ABC-1234</p>
-        <p>Hora de entrada: 10:00</p>
-        <p>Hora de saída: 15:30</p>
-        <p>Valor pago: R$ 20,00</p>
+    <div *ngFor="let spots of spotList">
+    <div class="rectangle"> {{spots.id}}
+      <div class="info-box" *ngIf="spots.currentCar">
+        <p>Marca: {{spots.currentCar.Marca}}</p>
+        <p>Modelo: {{spots.currentCar.Modelo}}</p>
+        <p>Placa: {{spots.currentCar.Placa}}</p>
+        <p>Hora de entrada: {{spots.currentCar.HoraEntrada}}</p>
+        <p>Hora de saída: {{spots.currentCar.HoraSaida}}</p>
+        <p>Valor pago: R$ {{spots.currentCar.ValorPago}}</p>
         <button href="#"># Registrar Saída</button>
       </div>
     </div>
-    <div class="rectangle" >
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div> 
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
-    <div class="rectangle">
-      <div class="info-box">Informações adicionais aqui.</div>
-    </div>
+  </div>
   </div>
